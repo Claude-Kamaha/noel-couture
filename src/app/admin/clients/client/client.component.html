@@ -1,0 +1,22 @@
+<table class="table table-striped">
+
+
+  <thead>
+    <tr>
+
+      <th scope="col">Clients</th>
+      <th scope="col">Email</th>
+      <th scope="col">Date de Creaion</th>
+      <th scope="col">Date de Mise a jour</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let el of users">
+    <th scope="row">{{el.name}}</th>
+    <td>{{el.email}}</td>
+    <td>{{el.created_at | date}}</td>
+    <td>{{el.updated_at | date}}</td>
+  </tr>
+  <tbody #data>
+
+  </tbody>
+</table>

@@ -1,7 +1,7 @@
 const express = require('express');
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
-
+const cors = require('cors');
 
 const app = express();
 const port = process.env.Port || 3000;
@@ -14,6 +14,9 @@ app.listen(port, () => {
 })
 
 
-
+// CORS is enabled for the selected origins
+let corsOptions = {
+    origin: [ 'http://localhost:4200', 'http://localhost:3000' ]
+};
 const routes = require('./routes/user');
-app.use('/', routes)
+app.use('/', cors(corsOptions),routes)

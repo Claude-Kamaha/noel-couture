@@ -1,10 +1,14 @@
-
 <mat-drawer-container>
-    <mat-drawer mode="side" opened="true">
-      <app-sidenav></app-sidenav>
-    </mat-drawer>
-    
-    <mat-drawer-content>
-        <app-navbar></app-navbar>
-    </mat-drawer-content>
-  </mat-drawer-container>
+  <mat-drawer mode="side" [opened]="sidebarOpen">
+    <app-sidenav></app-sidenav>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <app-navbar (togglesidebarForMe)="sidebarToggler()"></app-navbar>
+
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+
+  </mat-drawer-content>
+</mat-drawer-container>
