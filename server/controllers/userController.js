@@ -24,7 +24,7 @@ exports.view = (req, res) => {
          res.send(rows)
        }
        else {
-         console.log(err);
+         console.log(err)
        }
 
 
