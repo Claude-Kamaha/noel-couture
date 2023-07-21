@@ -30,7 +30,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatSliderModule } from '@angular/material/slider';
-
+import {MatSidenavModule} from '@angular/material/sidenav'
 const MaterialComponents = [
   MatFormFieldModule,
   MatButtonModule,
@@ -61,7 +61,8 @@ const MaterialComponents = [
   MatExpansionModule,
   MatButtonToggleModule,
   MatTooltipModule,
-  MatSliderModule
+  MatSliderModule,
+MatSidenavModule
 ];
 @NgModule({
   declarations: [],
