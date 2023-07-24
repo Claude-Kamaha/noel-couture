@@ -18,5 +18,12 @@ app.listen(port, () => {
 let corsOptions = {
     origin: [ 'http://localhost:4200', 'http://localhost:3000' ]
 };
-const routes = require('./routes/user');
-app.use('/', cors(corsOptions),routes)
+const userRoutes = require('./routes/user');
+app.use('/', cors(corsOptions), userRoutes)
+
+const modeleRoutes = require('./routes/modele');
+app.use('/', cors(corsOptions), modeleRoutes)
+
+const messageRoutes = require('./routes/message');
+app.use('/', cors(corsOptions), messageRoutes)
+
