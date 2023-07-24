@@ -13,4 +13,7 @@ export class ClientsService {
     return this.http.get(`${this.baseUrl}/getUsers`)
 
   }
+  getUsersType(){
+    return this.http.get(`${this.baseUrl}/userType`)
+  }
 }

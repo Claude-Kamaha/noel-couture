@@ -4,6 +4,7 @@ import { EmptyComponent } from './layout/empty/empty.component';
 import { LoginComponent } from './core/login/login.component';
 import { AdminPanelComponent } from './layout/admin-panel/admin-panel.component';
 import { UserPanelComponent } from './layout/user-panel/user-panel.component';
+import { ClientDashboardComponent } from './client/client-dashboard/client-dashboard/client-dashboard.component';
 
 const routes: Routes = [
   {
@@ -39,8 +40,8 @@ const routes: Routes = [
     component: UserPanelComponent,
     children: [
       {
-        path: 'login',
-        component: LoginComponent,
+        path: 'client',
+        component: ClientDashboardComponent,
       },
     ]
   }

@@ -8,6 +8,7 @@ import { SidenavComponent } from './admin-panel/sidenav/sidenav.component';
 import { NavbarComponent } from './admin-panel/navbar/navbar.component';
 import { SharedModule } from '../shared/shared.module';
 import { MaterialModule } from '../shared/material/material.module';
+import { ClientsModule } from '../admin/clients/clients.module';
 
 
 
@@ -23,7 +24,8 @@ import { MaterialModule } from '../shared/material/material.module';
     CommonModule,
     RouterModule,
     SharedModule,
-    MaterialModule
+    MaterialModule,
+    
   ]
 })
 export class LayoutModule { }

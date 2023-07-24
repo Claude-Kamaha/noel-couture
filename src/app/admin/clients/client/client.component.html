@@ -1,22 +1,49 @@
-<table class="table table-striped">
+<div class="container-fluid page">
+  <div class="page__box p-3 mt-1">Clients</div>
+  <div class="page__content shadow p-3 position-relative">
+      <div class="page__content-data  text-align-center">
+         <div class="table">
+          <table class="table table-hover">
+          
+            <thead>
+              <tr>
+          
+                <th scope="col">Clients</th>
+                <th scope="col">Email</th>
+                <th scope="col">Type</th>
 
+                <th scope="col">Date de Creaion</th>
+                <th scope="col">Date de Mise a jour</th>
+              </tr>
+            </thead>
+            <tr *ngFor="let el of users">
+              <th scope="row">{{el.username | titlecase}}</th>
+              <td>{{el.email}}</td>
+              <td>{{el.type | titlecase}}</td>
 
-  <thead>
-    <tr>
-
-      <th scope="col">Clients</th>
-      <th scope="col">Email</th>
-      <th scope="col">Date de Creaion</th>
-      <th scope="col">Date de Mise a jour</th>
-    </tr>
-  </thead>
-  <tr *ngFor="let el of users">
-    <th scope="row">{{el.name}}</th>
-    <td>{{el.email}}</td>
-    <td>{{el.created_at | date}}</td>
-    <td>{{el.updated_at | date}}</td>
-  </tr>
-  <tbody #data>
-
-  </tbody>
-</table>
+              <td>{{el.created_at | date}}</td>
+              <td>{{el.updated_at | date}}</td>
+            </tr>
+            <tbody #data>
+          
+            </tbody>
+          </table>
+          <nav aria-label="..." class="text-align-center; margin: auto">
+            <ul class="pagination">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item active">
+                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+      </div>
+  </div  >
+  </div>
+</div>

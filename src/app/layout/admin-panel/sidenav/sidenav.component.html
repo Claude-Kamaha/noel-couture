@@ -1,18 +1,19 @@
 <mat-nav-list>
-  <div class="logo-py-3">
-    <img src="../../../../assets/NoelLogo.jpeg" alt="" style="height: 200px;
-         object-fit: cover;
-    transform: scale(0.75) translate(-30%, -20%);">
+  <div class="logo-py-3" style="background-color: white;">
+    <img src="../../../../assets/logoNoel.png" alt="" style="height: 130px;
+    position: relative;
+    object-fit: cover;
+    transform: scale(0.75)translate(50%, 0%);">
   </div>
   <mat-divider></mat-divider>
-  <h2 matSubheader class="mt-2">APPLICATIONS</h2>
-  <a mat-list-item routerlink="/home" routerLinkActive="list-item-active">
+ 
+  <a mat-list-item routerLink="/home" routerLinkActive="list-item-active">
     <mat-icon>home</mat-icon>Home
   </a>
-  <a mat-list-item routerlink="/clients" routerLinkActive="list-item-active">
+  <a mat-list-item [routerLink]="['/dashboard']" routerLinkActive="list-item-active">
     <mat-icon>dashboard</mat-icon> Dashboard
   </a>
-  <a mat-list-item routerlink="/clients"><mat-icon>supervised_user_circle</mat-icon> Clients</a>
+  <a mat-list-item routerLink="/clients"><mat-icon>supervised_user_circle</mat-icon> Clients</a>
   <a mat-list-item><mat-icon>modele</mat-icon> Modeles</a>
 
 </mat-nav-list>

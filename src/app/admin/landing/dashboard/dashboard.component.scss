@@ -1,0 +1,15 @@
+.page{
+    color: white;
+    padding: 0.1 rem;
+    background-color: gray;
+     &__box{
+        min-height: 160px;
+        background-color: green;
+        margin: 0 -1rem;
+        font-size: 36px;
+        
+     }
+     &__content{
+        min-height: calc();
+     }
+}

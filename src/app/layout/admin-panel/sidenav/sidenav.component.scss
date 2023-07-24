@@ -6,6 +6,9 @@
       width: 200px;
    }
  }
+ a{
+   color: white;
+ }
  .mat-icon{
    vertical-align: center;
    margin-right: 1rem;
@@ -16,7 +19,7 @@
  }
 
  .mat-mdc-list-item{
-   color:#94a3b8;
+   color:white !important;
    font-size: 0.8 rem;
    height:  44px !important;
    margin-bottom: 4px;
@@ -24,19 +27,21 @@
       .mdc-list-item__content {
          border-radius: 5px;
          margin: 0.8px;
+         color: white !important;
          &:hover{
-            background: #c9cbd1 !important;
+            background: white !important;
+            color: black !important
          }
       }
    }
  }
  .list-item-active{
-   color: #f2f5f7 !important;
+   color: white !important;
    ::ng-deep {
       .mdc-list-item__content {
-        background-color: #c0c3cb;
+        background-color: white;
          &:hover{
-            background: #9196a3 !important;
+            background: white !important;
          }
       }
    }
@@ -46,4 +51,7 @@
    font-size : 0.6rem;
    font-weight: 100;
    letter-spacing: 1px;
+}
+.mat-mdc-list-base {
+   --mdc-list-list-item-label-text-color: #fcfcfcce;
 }

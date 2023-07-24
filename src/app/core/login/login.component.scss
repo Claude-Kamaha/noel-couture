@@ -5,7 +5,7 @@ html,body {
   margin:0;
 }
 body {
-  background-image: linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
+  background-image: linear-gradient(135deg,#33333391 10%, #41AB34 100%);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -40,7 +40,8 @@ body {
   }
 }
 .box-form  {
-  height: auto;
+  height: 70%;
+  width: 70%;
 }
 .box-form .left {
   color: #FFFFFF;
