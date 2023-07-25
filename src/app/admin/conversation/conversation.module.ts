@@ -1,32 +1,31 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RdvsComponent } from './rdvs/rdvs.component';
+import { ConversationComponent } from './conversation/conversation.component';
 import { RouterModule, Routes } from '@angular/router';
-import { MaterialModule } from 'src/app/shared/material/material.module';
 import { SharedModule } from 'src/app/shared/shared.module';
-
-
+import { MaterialModule } from 'src/app/shared/material/material.module';
 const routes: Routes = [
   {
     path: '',
     children: [
       {
         path: '',
-        component: RdvsComponent
+        component: ConversationComponent
       }
     ]
   }
 ]
 
+
 @NgModule({
   declarations: [
-    RdvsComponent
+    ConversationComponent
   ],
   imports: [
     CommonModule,
-    MaterialModule,
     SharedModule,
+    MaterialModule,
     RouterModule.forChild(routes)
   ]
 })
-export class RdvsModule { }
+export class ConversationModule { }

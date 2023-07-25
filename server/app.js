@@ -30,4 +30,7 @@ app.use('/', cors(corsOptions), messageRoutes)
 const rdvsRoutes = require('./routes/rdvs');
 app.use('/', cors(corsOptions), rdvsRoutes)
 
+const conversationRoutes = require('./routes/conversation');
+app.use('/', cors(corsOptions), conversationRoutes)
+
 

@@ -1,41 +1,39 @@
 import { Component, ViewChild } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
-import { MessagesService } from '../../messages/messages.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { RdvsService } from '../rdvs.service';
+import { MatTableDataSource } from '@angular/material/table';
+import { DisponibiliteService } from '../disponibilite.service';
 
 @Component({
-  selector: 'app-rdvs',
-  templateUrl: './rdvs.component.html',
-  styleUrls: ['./rdvs.component.scss']
+  selector: 'app-disponibilite',
+  templateUrl: './disponibilite.component.html',
+  styleUrls: ['./disponibilite.component.scss']
 })
-export class RdvsComponent {
-  displayedColumns: string[] = ['title', 'description', 'contenu', 'envoye', 'rdvDate', 'creationDate',];
-
+export class DisponibiliteComponent {
+  displayedColumns: string[] = ['contenu', 'envoye', 'creationDate', 'updatedDate',];
   dataSource = new MatTableDataSource<any>();
 
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
   @ViewChild(MatSort)
   sort!: MatSort;
-  rdvs: any;
+  jours: any;
   constructor(
-    private rdvsService: RdvsService
+    private disponibiliteService: DisponibiliteService
   ) { }
   ngOnInit() {
-    this.getAllRdvs()
+    this.getAllConversations()
   }
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
-  getAllRdvs() {
+  getAllConversations() {
     this.dataSource = new MatTableDataSource()
-    this.rdvsService.getRdvs().subscribe((response: any) => {
+    this.disponibiliteService.getDisponibility().subscribe((response: any) => {
 
-      this.rdvs = response.response
-      this.dataSource = new MatTableDataSource(this.rdvs)
+      this.jours = response.response
+      this.dataSource = new MatTableDataSource(this.jours)
       this.dataSource.paginator = this.paginator
 
     })

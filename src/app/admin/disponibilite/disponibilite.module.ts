@@ -1,32 +1,32 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RdvsComponent } from './rdvs/rdvs.component';
+import { DisponibiliteComponent } from './disponibilite/disponibilite.component';
 import { RouterModule, Routes } from '@angular/router';
-import { MaterialModule } from 'src/app/shared/material/material.module';
 import { SharedModule } from 'src/app/shared/shared.module';
-
-
+import { MaterialModule } from 'src/app/shared/material/material.module';
 const routes: Routes = [
   {
     path: '',
     children: [
       {
         path: '',
-        component: RdvsComponent
+        component: DisponibiliteComponent
       }
     ]
   }
 ]
 
+
+
 @NgModule({
   declarations: [
-    RdvsComponent
+    DisponibiliteComponent
   ],
   imports: [
     CommonModule,
-    MaterialModule,
     SharedModule,
+    MaterialModule,
     RouterModule.forChild(routes)
   ]
 })
-export class RdvsModule { }
+export class DisponibiliteModule { }

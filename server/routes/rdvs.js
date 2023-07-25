@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const userController = require('../controllers/rdvsController')
+const rdvsController = require('../controllers/rdvsController')
 
-router.get('/getRdvs', rdvs.view);
+router.get('/getRdvs', rdvsController.viewRdvs);
+router.get('/getfreeDays', rdvsController.jourDisponible);
 
 
 module.exports = router

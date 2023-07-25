@@ -36,6 +36,16 @@ const routes: Routes = [
         loadChildren: () =>
           import('./admin/messages/messages.module').then((m) => m.MessagesModule),
       },
+      {
+        path: 'conversations',
+        loadChildren: () =>
+          import('./admin/conversation/conversation.module').then((m) => m.ConversationModule),
+      },
+      {
+        path: 'disponibilites',
+        loadChildren: () =>
+          import('./admin/disponibilite/disponibilite.module').then((m) => m.DisponibiliteModule),
+      },
 
     ]
   },
