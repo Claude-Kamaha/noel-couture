@@ -23,24 +23,7 @@ export class ClientComponent {
     this.clientsService.getUsers().subscribe((res) => {
       console.log(res);
       this.users = res
-      // if (this.users.length > 0) {
-
-      //   var temp = "";
-      //   this.users.forEach((itemData: any) => {
-
-      //     temp += `<tr>
-      //     <td>${itemData.name} </td>
-      //     <td>${itemData.email} </td>
-      //     <td>${itemData.name} </td>
-      //     <td>${itemData.name} </td>
-      //     </tr>`
-      //   });
-      //   console.log(temp);
-
-      //   this.data.nativeElement.value = temp;
-      //   console.log(this.data);
-
-      // }
+     
     })
   }
 }

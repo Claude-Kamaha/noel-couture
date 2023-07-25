@@ -8,8 +8,8 @@ const pool = mysql.createPool({
   password: '',
   database: 'couture'
 });
-let data={
-  response: '',
+let response={
+  data: '',
   message: ''
 };
 
@@ -23,13 +23,13 @@ console.log('hello');
        connection.release();
 
        if (!err) {
-         data.response = rows;
-         data.message = "Modeles succesfully retrieved";
-         console.log(data);
-        res.send(data)
+        response.data = rows;
+        response.message = "Modeles succesfully retrieved";
+        
+        res.send(response)
        }
        else {
-        data.message = "Modeles Failed to retrieved"
+        response.message = "Modeles Failed to retrieved"
        }
   })
    })

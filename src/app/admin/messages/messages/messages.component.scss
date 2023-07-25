@@ -1,0 +1,32 @@
+img { width: 30px; height: 30px; }
+.page{
+    color: white;
+     padding: 0.1 rem;
+    background-color: rgb(239, 239, 239);
+     &__box{
+        min-height: 80px;
+        background-color: #41AB34;
+         margin: 0 -1rem;
+        font-size: 36px;
+        
+     }
+     &__content{
+        min-height: calc(100vh - 170px);
+    border-radius: 10px; 
+ margin-top: 2rem;
+background: white;
+color: black;
+// font-size: 2rem; 
+&.data{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}  
+}
+}
+.table{
+    width: 100%;
+}
+table{
+    width: 100%;
+}

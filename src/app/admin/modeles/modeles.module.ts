@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ClientComponent } from './client/client.component';
+import { ModelesComponent } from './modeles/modeles.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { MaterialModule } from 'src/app/shared/material/material.module';
+
 
 const routes: Routes = [
   {
@@ -10,20 +12,26 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: ClientComponent
+        component: ModelesComponent
       }
     ]
   }
 ]
 
+
 @NgModule({
   declarations: [
-    ClientComponent
+    ModelesComponent,
+    
   ],
   imports: [
     CommonModule,
-    SharedModule,
+   SharedModule,
+    MaterialModule,
     RouterModule.forChild(routes)
+  ],
+  providers:[
+    
   ]
 })
-export class ClientsModule { }
+export class ModelesModule { }

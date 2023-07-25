@@ -27,3 +27,7 @@ app.use('/', cors(corsOptions), modeleRoutes)
 const messageRoutes = require('./routes/message');
 app.use('/', cors(corsOptions), messageRoutes)
 
+const rdvsRoutes = require('./routes/rdvs');
+app.use('/', cors(corsOptions), rdvsRoutes)
+
+

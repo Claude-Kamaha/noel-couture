@@ -13,13 +13,25 @@ let data={
   message: ''
 };
 
-exports.viewMessages = (req, res) => {
+exports.viewRdvs = (req, res) => {
 console.log('hello');
    pool.getConnection((err, connection) => {
     if (err) throw err
     console.log(`connected as id ${connection.threadId}`);
 
-     connection.query(`SELECT messages.*,users.name FROM messages JOIN users on messages.user_id=users.id;`
+     connection.query(`
+     SELECT demandes.*
+     FROM  
+     (SELECT
+     proposals.*, users.name ,jours.title FROM proposals
+          JOIN users ON user_id=users.id,
+          JOIN jours ON jour_id =jours.id
+          )
+          demandes JOIN proposals on demandes.proposal_id=proposals.id  
+     
+     
+     
+         ;`
      , (err, rows) => {
        connection.release();
 

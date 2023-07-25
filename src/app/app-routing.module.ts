@@ -21,6 +21,21 @@ const routes: Routes = [
         loadChildren: () =>
           import('./admin/clients/clients.module').then((m) => m.ClientsModule),
       },
+      {
+        path: 'modeles',
+        loadChildren: () =>
+          import('./admin/modeles/modeles.module').then((m) => m.ModelesModule),
+      },
+      {
+        path: 'rdvs',
+        loadChildren: () =>
+          import('./admin/rdvs/rdvs.module').then((m) => m.RdvsModule),
+      },
+      {
+        path: 'messages',
+        loadChildren: () =>
+          import('./admin/messages/messages.module').then((m) => m.MessagesModule),
+      },
 
     ]
   },

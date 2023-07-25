@@ -14,6 +14,8 @@
     <mat-icon>dashboard</mat-icon> Dashboard
   </a>
   <a mat-list-item routerLink="/clients"><mat-icon>supervised_user_circle</mat-icon> Clients</a>
-  <a mat-list-item><mat-icon>modele</mat-icon> Modeles</a>
+  <a mat-list-item [routerLink]="['/modeles']" routerLinkActive="list-item-active"><mat-icon>modele</mat-icon> Modeles</a>
+  <a mat-list-item [routerLink]="['/messages']" routerLinkActive="list-item-active"><mat-icon>chat</mat-icon> Messages</a>
+  <a mat-list-item [routerLink]="['/rdvs']" routerLinkActive="list-item-active"><mat-icon>Rendez vous</mat-icon> Modeles</a>
 
 </mat-nav-list>
