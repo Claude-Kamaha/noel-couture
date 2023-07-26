@@ -1,462 +1,462 @@
-*, ::before, ::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body{
-    font-family: Nunito sans, sans-serif;
-}
-
-/* Navigation */
-nav{
-    position: fixed;
-    height: 70px;
-    width: 100%;
-    background: linear-gradient(to bottom,#333,#626262);
-    /* z-index: 10; */
-}
-
-.logo-menu{
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    width: 50px;
-    z-index: 25;
-    display: none;
-}
-
-.liste-nav{
-background: linear-gradient(to bottom,#333,#626262);
-height: 100%;
-width: 100%;
-display: flex;
-justify-content: center;
-list-style-type: none;
-/* z-index: 20 */
-}
-
-.item-nav {
-    display: flex;
-    align-items: center;
-}
-
-.item-nav a {
-    font-size: 22px;
-    color:white;
-    text-decoration: none;
-    margin: 0 20px;
-    text-transform: uppercase;
-}
-
-.item-nav a::after{
-    content: "";
-    display: block;
-    margin: 0 auto;
-    width: 0%;
-    height: 2px;
-    background-color: #f1f1f1;
-    transition: width 0.2s ease-in-out;
-
-}
-.item-nav a:hover::after{
-    width: 100%;
-}
-
-@media screen and (max-width: 700px){
-.logo-menu{
-    display: block;
-}
-.liste-nav{
-    padding-top: 70px;
-    flex-direction: column;
-    height: auto;
-    position: relative;
-    display:none;
-}
-.liste-nav.active{
-    display: block;
-}
-.item-nav {
-    height: 70px;
-    justify-content: center;
-
-}
-
-}
-
-/* accueil */
-.accueil{
-    width:100%;
-    height: 50vh;
-    min-height: 970px;
-    // background-image: url(ressources/background.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-bottom: 1px dotted #777;
-    padding-top: 1px;
-}
-
-.logo-ejara{
-    border-radius: 50%;
-    width: 180px;
-    display: block;
-    margin: 179px auto 0;
-}
-.accueil h1{
-    text-align: center;
-    font-size: 100px;
-    text-shadow: 0 0 10px #807a7a;
-    color: #5e3cf3;
-    margin-top: 10px;
-    font-family: Merienda one, sans-serif ;
-}
-.sous-titre{
-    text-align:center;
-    font-size: 25px;
-    font-weight: bold;
-    margin: 5px 0;
-    text-shadow: 0 0 10px  #807a7a;
-}
-.btn-accueil{
-    background-color: crimson;
-    border-radius: 999px;
-    border: 1px solid #333;
-    margin: 30px auto 0;
-    color:#f1f1f1;
-    display: block;
-    text-align: center;
-    width: 200px;
-    height: 60px;
-    line-height: 60px;
-    transition: all 0.2s ease-in-out;
-}
-.btn-accueil:hover{
-    background: rgb(218, 122, 122);
-    color: #333;
-}
-@media screen and (max-width:798px){
-    .accueil{
-        background-position: center;
-        height: 650px;
-        min-height: auto;
-    }
-    .logo-ejara{
-        width: 150px;
-        margin: 120px auto 0;
-    }
-
-    .accueil h1{
-        font-size: 30px;
-    }
-     .sous-titre{
-        font-size: 23px;
-     }
-     .btn-accueil{
-        margin: 15px auto 0;
-        text-align: center;
-        width: 130px;
-        height: 30px;
-        line-height: 30px;
-        font-size: 14px;
-
-}
-
-.logo-menu{
-    top: 15px;
-    width: 40px;
-}
-
-}
-
-/*section asymetrique*/
-
-.section-asymetrique{
-    display: grid;
-    grid-template: 200px repeat(3,auto) /1fr 600px 1fr;
-    background-color: #f1f1f1;
-}
-.section-asymetrique h2 {
-    grid-area: 1 / 1 / 2 / -1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #333;
-    font-size: 50px;
-    text-transform: uppercase;
-    padding-bottom: 20px;
-
-}
-
-.bloc-1,
-.img-grid-1{
-    grid-area: 2 / 2 / 3 / 3;
-}
-
-.bloc-right,
-.img-grid-2{
-    grid-area: 3 / 2 / 4 / 3;
-}
-
-.bloc-3,
-.img-grid-3{
-    grid-area: 4 / 2 / 5 / 3 ;
-}
-
-.bloc{
-    background-color: #333;
-    color: #f1f1f1;
-    position: relative;
-    border-radius: 2px;
-    height: 750px;
-    margin-bottom: 250px;
-}
-
-.img-grid{
-    width: 500px;
-    height: 700px;
-    object-fit: cover;
-    position: relative;
-}
-
-.img-grid-1,
-.img-grid-3 {
-    top: 130px;
-    left: 20px;
-
-}
-
-.bloc-left{
-    left: -380px;
-}
- .bloc-txt-left{
-    width: 50%;
-    height: 100%;
- }
-  .bloc-txt-left h3{
-   white-space: nowrap;
-   font-size: 35px;
-   margin: 30px 15px;
- }
-.bloc-txt-left p{
-    line-height: 40px;
-    padding: 15px;
-}
-.bloc button {
-    border-radius: 9999px;
-    outline: none;
-    border: none;
-    background: crimson;
-    border: 1px solid #333;
-    color: #f1f1f1;
-    padding:20px 35px;
-    font-size: 20px;
-    margin: 35px auto;
-    cursor: pointer;
-    display: block;
-}
-
-.bloc-right{
-    right: -300px;
-}
-
-.img-grid-2 {
-    top: 130px;
-    left: 20px;
-
-}
-
- .bloc-txt-right{
-    position: absolute;
-    right: 0;
-    width: 50%;
-    height: 100%;
- }
-
-  .bloc-txt-right h3{
-   position: relative;
-   font-size: 35px;
-   margin: 30px 15px;
- }
-
-.bloc-txt-right p{
-    line-height: 40px;
-    padding: 15px;
-}
-
-.bloc-txt-right button{
-   margin: 5px auto;
-}
-
-/**ligne vertical**/
-
-.ligne-gauche {
-    grid-area: 1 / 2 / -1 / 3;
-    border-left: 1px solid #333;
-}
-.ligne-droite{
-    grid-area: 1 / 3 / -1 / 4;
-    border-left: 1px solid #333;
-}
-
-@media screen and (max-width: 1200px) {
-    .section-asymetrique{
-        grid-template: 200px repeat(6, auto) 100px;
-    }
-    .section-asymetrique h2 {
-        font-size: 50px;
-        padding-bottom: 0px;
-    }
-    .bloc-1{
-        grid-area: 2 / 2 / 3 / 3;
-    }
-    .img-grid-1{
-        grid-area:  3 / 2 / 4 / 3;
-    }
-
-    .bloc-right{
-        grid-area: 4 / 2 / 5 / 3;
-
-    }
-
-    .img-grid-2{
-        grid-area: 5 / 2 / 6 / 3;
-    }
-
-    .bloc-3{
-        grid-area: 6 / 2 / 7 / 3;
-    }
-
-     .img-grid-3 {
-        grid-area: 7 / 2 / 8 / 3;
-     }
-
-     .bloc{
-        height: 100%;
-        margin-bottom: 0px;
-
-     }
-
-     .img-grid{
-        position: static;
-        width: 600px;
-        height: 750px;
-     }
-
-     .img-grid-1,
-     .img-grid-3{
-        top: 0px;
-        left: 0px;
-     }
-
-     .img-grid-2{
-        top: 0px;
-        left: 0px;
-     }
-     .bloc-left{
-
-        left: 0px;
-     }
-     .bloc-right{
-        right: 0px;
-     }
-
-     .bloc-txt-left{
-        width: 100%;
-        height: 100%;
-     }
-
-     .bloc-txt-left h3,
-     .bloc-txt-right h3{
-        text-align: center;
-     }
-.bloc-txt-left p,
-.bloc-txt-right p{
-    font-size: 20px;
-    line-height: 1.8;
-    padding: 15px;
-}
-.bloc button{
-    font-size: 20px;
-    padding: 15px 30px;
-    margin-bottom: 30px;
-}
- .bloc-txt-right{
-    position: static;
-    width: 100%;
-    height: 100%;
- }
-
-}
-
-@media screen and (max-width: 600px){
-        .section-asymetrique{
-        grid-template: 150px repeat(6, auto) 100px / 100%;
-    }
-
-.ligne-gauche, .ligne-droite {
-    display: none;
-}
-
-    .section-asymetrique h2 {
-        font-size: 30px;
-        /* text-align: center; */
-    }
-
-.bloc,.img-grid{
-    grid-area: auto;;
-}
-
-.img-grid {
-    width: 100%;
-    height: 500px;
-}
-
-  .bloc-txt-right {
-         width: 100%;
-     }
-
-.bloc-txt-left h3,
-     .bloc-txt-right h3{
-        font-size: 25px;
-     }
-
-
-}
-
- /* Section Parallax  */
-.parallax{
-    width: 100%;
-    height: 300px;
-    // background: url(ressources/pic.jpg);
-    background-position: center;
-    background-attachment: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.parallax p {
-    font-size: 65px;
-    color: #f1f1f1;
-
-}
-.parallax span {
-    display:block;
-    font-size: 25px;
-    color: #f1f1f1;
-}
-
-@media screen and (max-width: 400px) {
-    .parallax p{
-        font-size: 55px;
-    }
-
-}
-
-/*-----------------Section Tarifs --------------------*/
+// *, ::before, ::after {
+//     box-sizing: border-box;
+//     margin: 0;
+//     padding: 0;
+// }
+
+// body{
+//     font-family: Nunito sans, sans-serif;
+// }
+
+// /* Navigation */
+// nav{
+//     position: fixed;
+//     height: 70px;
+//     width: 100%;
+//     background: linear-gradient(to bottom,#333,#626262);
+//     /* z-index: 10; */
+// }
+
+// .logo-menu{
+//     position: absolute;
+//     top: 10px;
+//     right: 15px;
+//     width: 50px;
+//     z-index: 25;
+//     display: none;
+// }
+
+// .liste-nav{
+// background: linear-gradient(to bottom,#333,#626262);
+// height: 100%;
+// width: 100%;
+// display: flex;
+// justify-content: center;
+// list-style-type: none;
+// /* z-index: 20 */
+// }
+
+// .item-nav {
+//     display: flex;
+//     align-items: center;
+// }
+
+// .item-nav a {
+//     font-size: 22px;
+//     color:white;
+//     text-decoration: none;
+//     margin: 0 20px;
+//     text-transform: uppercase;
+// }
+
+// .item-nav a::after{
+//     content: "";
+//     display: block;
+//     margin: 0 auto;
+//     width: 0%;
+//     height: 2px;
+//     background-color: #f1f1f1;
+//     transition: width 0.2s ease-in-out;
+
+// }
+// .item-nav a:hover::after{
+//     width: 100%;
+// }
+
+// @media screen and (max-width: 700px){
+// .logo-menu{
+//     display: block;
+// }
+// .liste-nav{
+//     padding-top: 70px;
+//     flex-direction: column;
+//     height: auto;
+//     position: relative;
+//     display:none;
+// }
+// .liste-nav.active{
+//     display: block;
+// }
+// .item-nav {
+//     height: 70px;
+//     justify-content: center;
+
+// }
+
+// }
+
+// /* accueil */
+// .accueil{
+//     width:100%;
+//     height: 50vh;
+//     min-height: 970px;
+//     // background-image: url(ressources/background.jpg);
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     border-bottom: 1px dotted #777;
+//     padding-top: 1px;
+// }
+
+// .logo-ejara{
+//     border-radius: 50%;
+//     width: 180px;
+//     display: block;
+//     margin: 179px auto 0;
+// }
+// .accueil h1{
+//     text-align: center;
+//     font-size: 100px;
+//     text-shadow: 0 0 10px #807a7a;
+//     color: #5e3cf3;
+//     margin-top: 10px;
+//     font-family: Merienda one, sans-serif ;
+// }
+// .sous-titre{
+//     text-align:center;
+//     font-size: 25px;
+//     font-weight: bold;
+//     margin: 5px 0;
+//     text-shadow: 0 0 10px  #807a7a;
+// }
+// .btn-accueil{
+//     background-color: crimson;
+//     border-radius: 999px;
+//     border: 1px solid #333;
+//     margin: 30px auto 0;
+//     color:#f1f1f1;
+//     display: block;
+//     text-align: center;
+//     width: 200px;
+//     height: 60px;
+//     line-height: 60px;
+//     transition: all 0.2s ease-in-out;
+// }
+// .btn-accueil:hover{
+//     background: rgb(218, 122, 122);
+//     color: #333;
+// }
+// @media screen and (max-width:798px){
+//     .accueil{
+//         background-position: center;
+//         height: 650px;
+//         min-height: auto;
+//     }
+//     .logo-ejara{
+//         width: 150px;
+//         margin: 120px auto 0;
+//     }
+
+//     .accueil h1{
+//         font-size: 30px;
+//     }
+//      .sous-titre{
+//         font-size: 23px;
+//      }
+//      .btn-accueil{
+//         margin: 15px auto 0;
+//         text-align: center;
+//         width: 130px;
+//         height: 30px;
+//         line-height: 30px;
+//         font-size: 14px;
+
+// }
+
+// .logo-menu{
+//     top: 15px;
+//     width: 40px;
+// }
+
+// }
+
+// /*section asymetrique*/
+
+// .section-asymetrique{
+//     display: grid;
+//     grid-template: 200px repeat(3,auto) /1fr 600px 1fr;
+//     background-color: #f1f1f1;
+// }
+// .section-asymetrique h2 {
+//     grid-area: 1 / 1 / 2 / -1;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     color: #333;
+//     font-size: 50px;
+//     text-transform: uppercase;
+//     padding-bottom: 20px;
+
+// }
+
+// .bloc-1,
+// .img-grid-1{
+//     grid-area: 2 / 2 / 3 / 3;
+// }
+
+// .bloc-right,
+// .img-grid-2{
+//     grid-area: 3 / 2 / 4 / 3;
+// }
+
+// .bloc-3,
+// .img-grid-3{
+//     grid-area: 4 / 2 / 5 / 3 ;
+// }
+
+// .bloc{
+//     background-color: #333;
+//     color: #f1f1f1;
+//     position: relative;
+//     border-radius: 2px;
+//     height: 750px;
+//     margin-bottom: 250px;
+// }
+
+// .img-grid{
+//     width: 500px;
+//     height: 700px;
+//     object-fit: cover;
+//     position: relative;
+// }
+
+// .img-grid-1,
+// .img-grid-3 {
+//     top: 130px;
+//     left: 20px;
+
+// }
+
+// .bloc-left{
+//     left: -380px;
+// }
+//  .bloc-txt-left{
+//     width: 50%;
+//     height: 100%;
+//  }
+//   .bloc-txt-left h3{
+//    white-space: nowrap;
+//    font-size: 35px;
+//    margin: 30px 15px;
+//  }
+// .bloc-txt-left p{
+//     line-height: 40px;
+//     padding: 15px;
+// }
+// .bloc button {
+//     border-radius: 9999px;
+//     outline: none;
+//     border: none;
+//     background: crimson;
+//     border: 1px solid #333;
+//     color: #f1f1f1;
+//     padding:20px 35px;
+//     font-size: 20px;
+//     margin: 35px auto;
+//     cursor: pointer;
+//     display: block;
+// }
+
+// .bloc-right{
+//     right: -300px;
+// }
+
+// .img-grid-2 {
+//     top: 130px;
+//     left: 20px;
+
+// }
+
+//  .bloc-txt-right{
+//     position: absolute;
+//     right: 0;
+//     width: 50%;
+//     height: 100%;
+//  }
+
+//   .bloc-txt-right h3{
+//    position: relative;
+//    font-size: 35px;
+//    margin: 30px 15px;
+//  }
+
+// .bloc-txt-right p{
+//     line-height: 40px;
+//     padding: 15px;
+// }
+
+// .bloc-txt-right button{
+//    margin: 5px auto;
+// }
+
+// /**ligne vertical**/
+
+// .ligne-gauche {
+//     grid-area: 1 / 2 / -1 / 3;
+//     border-left: 1px solid #333;
+// }
+// .ligne-droite{
+//     grid-area: 1 / 3 / -1 / 4;
+//     border-left: 1px solid #333;
+// }
+
+// @media screen and (max-width: 1200px) {
+//     .section-asymetrique{
+//         grid-template: 200px repeat(6, auto) 100px;
+//     }
+//     .section-asymetrique h2 {
+//         font-size: 50px;
+//         padding-bottom: 0px;
+//     }
+//     .bloc-1{
+//         grid-area: 2 / 2 / 3 / 3;
+//     }
+//     .img-grid-1{
+//         grid-area:  3 / 2 / 4 / 3;
+//     }
+
+//     .bloc-right{
+//         grid-area: 4 / 2 / 5 / 3;
+
+//     }
+
+//     .img-grid-2{
+//         grid-area: 5 / 2 / 6 / 3;
+//     }
+
+//     .bloc-3{
+//         grid-area: 6 / 2 / 7 / 3;
+//     }
+
+//      .img-grid-3 {
+//         grid-area: 7 / 2 / 8 / 3;
+//      }
+
+//      .bloc{
+//         height: 100%;
+//         margin-bottom: 0px;
+
+//      }
+
+//      .img-grid{
+//         position: static;
+//         width: 600px;
+//         height: 750px;
+//      }
+
+//      .img-grid-1,
+//      .img-grid-3{
+//         top: 0px;
+//         left: 0px;
+//      }
+
+//      .img-grid-2{
+//         top: 0px;
+//         left: 0px;
+//      }
+//      .bloc-left{
+
+//         left: 0px;
+//      }
+//      .bloc-right{
+//         right: 0px;
+//      }
+
+//      .bloc-txt-left{
+//         width: 100%;
+//         height: 100%;
+//      }
+
+//      .bloc-txt-left h3,
+//      .bloc-txt-right h3{
+//         text-align: center;
+//      }
+// .bloc-txt-left p,
+// .bloc-txt-right p{
+//     font-size: 20px;
+//     line-height: 1.8;
+//     padding: 15px;
+// }
+// .bloc button{
+//     font-size: 20px;
+//     padding: 15px 30px;
+//     margin-bottom: 30px;
+// }
+//  .bloc-txt-right{
+//     position: static;
+//     width: 100%;
+//     height: 100%;
+//  }
+
+// }
+
+// @media screen and (max-width: 600px){
+//         .section-asymetrique{
+//         grid-template: 150px repeat(6, auto) 100px / 100%;
+//     }
+
+// .ligne-gauche, .ligne-droite {
+//     display: none;
+// }
+
+//     .section-asymetrique h2 {
+//         font-size: 30px;
+//         /* text-align: center; */
+//     }
+
+// .bloc,.img-grid{
+//     grid-area: auto;;
+// }
+
+// .img-grid {
+//     width: 100%;
+//     height: 500px;
+// }
+
+//   .bloc-txt-right {
+//          width: 100%;
+//      }
+
+// .bloc-txt-left h3,
+//      .bloc-txt-right h3{
+//         font-size: 25px;
+//      }
+
+
+// }
+
+//  /* Section Parallax  */
+// .parallax{
+//     width: 100%;
+//     height: 300px;
+//     // background: url(ressources/pic.jpg);
+//     background-position: center;
+//     background-attachment: fixed;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+// }
+
+// .parallax p {
+//     font-size: 65px;
+//     color: #f1f1f1;
+
+// }
+// .parallax span {
+//     display:block;
+//     font-size: 25px;
+//     color: #f1f1f1;
+// }
+
+// @media screen and (max-width: 400px) {
+//     .parallax p{
+//         font-size: 55px;
+//     }
+
+// }
+
+// /*-----------------Section Tarifs --------------------*/
 
 .section-tarifs{
     padding-bottom: 150px;
@@ -521,10 +521,9 @@ list-style-type: none;
 .cartes-tarifs:nth-child(3) h4{
     background: #992f44;
 }
-.cartes-tarifs p {
-    font-size: 18px;
-    padding: 20px 10px;
-    border-top: 1px solid rgb(218, 122, 122);
+.cartes-tarifs div {
+  text-align: center;
+  height: 300px;
 
 }
  .cartes-tarifs p:last-of-type{
@@ -575,97 +574,97 @@ list-style-type: none;
 }
  }
 
- /* ------Section Contact ------------ */
+//  /* ------Section Contact ------------ */
 
- .section-contact {
-    padding-bottom: 100px;
- }
+//  .section-contact {
+//     padding-bottom: 100px;
+//  }
 
- .section-contact h2 {
-    text-align: center;
-    color: #333;
-    font-size: 48px;
-    font-weight: 400;
-    margin-bottom: 50px;
-    padding: 70px 0 0 0;
- }
- .section-contact h2 strong{
-    font-weight: 900;
- }
- .container-form{
-    margin: 0 auto;
-    width: 70%;
- }
- .form-groupe {
-    position: relative;
-    margin-bottom: 45px;
- }
- .form-groupe label {
-    color: #aaa;
-    font-size: 20px;
- }
- .form-groupe input{
-display: block;
-width: 100%;
-padding: 10px 0px;
-border: none;
-outline: none;
-background: none;
-border-bottom: 3px solid #aaa;
-color: #666;
-font-size: 20px;
-}
+//  .section-contact h2 {
+//     text-align: center;
+//     color: #333;
+//     font-size: 48px;
+//     font-weight: 400;
+//     margin-bottom: 50px;
+//     padding: 70px 0 0 0;
+//  }
+//  .section-contact h2 strong{
+//     font-weight: 900;
+//  }
+//  .container-form{
+//     margin: 0 auto;
+//     width: 70%;
+//  }
+//  .form-groupe {
+//     position: relative;
+//     margin-bottom: 45px;
+//  }
+//  .form-groupe label {
+//     color: #aaa;
+//     font-size: 20px;
+//  }
+//  .form-groupe input{
+// display: block;
+// width: 100%;
+// padding: 10px 0px;
+// border: none;
+// outline: none;
+// background: none;
+// border-bottom: 3px solid #aaa;
+// color: #666;
+// font-size: 20px;
+// }
 
-textarea {
-width: 100%;
-height: 200px;
-border: none;
-border: 3px solid #aaa;
-border-radius: 3px;
-padding: 5px;
-resize: none;
-outline: none;
-font-size: 20px;
-background: #f1f1f1;
-}
+// textarea {
+// width: 100%;
+// height: 200px;
+// border: none;
+// border: 3px solid #aaa;
+// border-radius: 3px;
+// padding: 5px;
+// resize: none;
+// outline: none;
+// font-size: 20px;
+// background: #f1f1f1;
+// }
 
-.form-groupe:nth-child(4){
-    margin-bottom: 25px;
-}
+// .form-groupe:nth-child(4){
+//     margin-bottom: 25px;
+// }
 
-.form-groupe .button-sub{
-    display: block;
-    width: auto;
-    padding: 15px 60px;
-    border: 3px solid rgb(144, 144, 144);
-    border-radius: 9999px;
-    background-image: linear-gradient(to right,transparent 50%, rgb(65,65,65)50%, rgb(134,134,134));
-    background-size: 200%;
-    color: #333;
-    font-size: 24px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.4s ease-in-out;
-}
-.form-groupe .button-sub:hover{
-    color: #fff;
-    background-position: 100%;
-    border: 3px solid #fff;
-}
+// .form-groupe .button-sub{
+//     display: block;
+//     width: auto;
+//     padding: 15px 60px;
+//     border: 3px solid rgb(144, 144, 144);
+//     border-radius: 9999px;
+//     background-image: linear-gradient(to right,transparent 50%, rgb(65,65,65)50%, rgb(134,134,134));
+//     background-size: 200%;
+//     color: #333;
+//     font-size: 24px;
+//     font-weight: 500;
+//     cursor: pointer;
+//     transition: all 0.4s ease-in-out;
+// }
+// .form-groupe .button-sub:hover{
+//     color: #fff;
+//     background-position: 100%;
+//     border: 3px solid #fff;
+// }
 
-@media screen and (max-width:1300px) {
-     .section-contact h2 {
-    padding: 70px 0 0 0 ;
- }
- .container-form {
-    padding-left: 0;
- }
+// @media screen and (max-width:1300px) {
+//      .section-contact h2 {
+//     padding: 70px 0 0 0 ;
+//  }
+//  .container-form {
+//     padding-left: 0;
+//  }
 
-}
+// }
 
-footer{
-    border-top: 1px solid #333;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-}
+// footer{
+//     border-top: 1px solid #333;
+//     width: 100%;
+//     text-align: center;
+//     padding: 10px 0;
+// }
