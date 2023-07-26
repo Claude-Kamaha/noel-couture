@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { RegistrationComponent } from './registration/registration.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
@@ -26,6 +26,7 @@ import { ModalComponent } from '../shared-components/modal/modal.component';
     ReactiveFormsModule,
     FormsModule,
     MatFormFieldModule
-  ]
+  ],
+  providers: [DatePipe],
 })
 export class AuthModule { }
