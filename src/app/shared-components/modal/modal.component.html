@@ -1,0 +1,19 @@
+<div class="header" style="display: flex; flex-direction: row; justify-content: space-between;">
+  <h1 mat-dialog-title
+    style="font-weight: bold;font-size: 25px; margin-bottom: 0px;padding-bottom: 5px; padding-left: 14px;">
+    {{ modalTitle }}
+
+  </h1>
+  <h1 mat-dialog-title class="close" mat-dialog-close style="margin-bottom: 0px;padding-left: 14px;">
+    &times;</h1>
+</div>
+<hr>
+<div mat-dialog-content style="padding: 14px; color:black;">
+  <ng-content select="[body]"></ng-content>
+</div>
+
+<div mat-dialog-actions style="padding: 14px;">
+  <ng-content select="[btns]"></ng-content>
+  <!-- <input type="button" value="Cancel" (click)="cancel()" [disabled]="disabled">
+  <input type="submit" value="Submit" (click)="confirm()"> -->
+</div>

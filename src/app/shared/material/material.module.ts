@@ -30,7 +30,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatSliderModule } from '@angular/material/slider';
-import {MatSidenavModule} from '@angular/material/sidenav'
+import { MatSidenavModule } from '@angular/material/sidenav'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 const MaterialComponents = [
   MatFormFieldModule,
   MatButtonModule,
@@ -62,7 +63,9 @@ const MaterialComponents = [
   MatButtonToggleModule,
   MatTooltipModule,
   MatSliderModule,
-MatSidenavModule
+  MatSidenavModule,
+  FormsModule,
+  ReactiveFormsModule
 ];
 @NgModule({
   declarations: [],

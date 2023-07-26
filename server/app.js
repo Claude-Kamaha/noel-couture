@@ -12,7 +12,8 @@ app.use(bodyParser.json());
 app.listen(port, () => {
   console.log('Server started on port 3000')
 })
-
+app.use(express.urlencoded({ extended: false }))
+app.use(express.json())
 
 // CORS is enabled for the selected origins
 let corsOptions = {

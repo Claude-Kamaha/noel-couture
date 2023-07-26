@@ -1,0 +1,24 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <app-modal [modalTitle]="'Bienvenue chez Noel Couture'" (submit)="onSubmit()">
+    <div body>
+
+
+
+      <label for="lname">Nom</label>
+      <input type="text" id="lname" name="username" placeholder="Nom" formControlName="name">
+      <label for="lname">Email </label>
+      <input type="text" name="email" placeholder="Email" formControlName="email">
+
+      <label for="lname">Mot de Passe </label>
+      <input type="text" id="password" name="password" placeholder="Mot de passe" formControlName="password">
+
+
+    </div>
+    <div btns class="divHeight">
+
+      <input type="button" value="Cancel" (click)="closeDialog()">
+      <input type="submit" value="Submit" [disabled]="!registerForm.valid">
+
+    </div>
+  </app-modal>
+</form>

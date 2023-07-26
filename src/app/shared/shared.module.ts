@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ImagePipe } from './pipes/image.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -10,8 +11,10 @@ import { ImagePipe } from './pipes/image.pipe';
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  exports:[
+  exports: [
     ImagePipe
   ]
 })
