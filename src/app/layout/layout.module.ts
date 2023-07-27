@@ -9,6 +9,7 @@ import { NavbarComponent } from './admin-panel/navbar/navbar.component';
 import { SharedModule } from '../shared/shared.module';
 import { MaterialModule } from '../shared/material/material.module';
 import { ClientsModule } from '../admin/clients/clients.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -25,6 +26,8 @@ import { ClientsModule } from '../admin/clients/clients.module';
     RouterModule,
     SharedModule,
     MaterialModule,
+    FormsModule,
+    ReactiveFormsModule
     
   ]
 })

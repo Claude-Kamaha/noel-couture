@@ -12,6 +12,7 @@ import { ModalComponent } from './shared-components/modal/modal.component';
 import { SharedComponentsModule } from './shared-components/shared-components.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthModule } from './core/auth.module';
+import { DatePipe } from '@angular/common';
 
 
 
@@ -35,7 +36,7 @@ import { AuthModule } from './core/auth.module';
 
 
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,34 +1,26 @@
 <body>
   <div class="box-form">
     <div class="left">
-      <div class="overlay">
+      <!-- <div class="overlay">
 
-      </div>
+      </div> -->
     </div>
 
 
     <div class="right">
-
+      
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <div class="inputs">
-        <h2>Login</h2>
-        <input type="text" placeholder="user name">
+        <h1 style="font-size: 40px;margin-bottom: 30px; font-weight: 800;">Login</h1>
+        <input type="email" placeholder="Email" formControlName="email">
         <br>
-        <input type="password" placeholder="password">
+        <input type="password" placeholder="Password" formControlName="password">
       </div>
-
-      <br><br>
-
-      <div class="remember-me--forget-password">
-        <!-- Angular -->
-        <!-- <label>
-          <input type="checkbox" name="item" checked />
-          <span class="text-checkbox">Remember me</span>
-        </label> -->
-        <!-- <p>forget password?</p> -->
-      </div>
-
-      <br>
-      <button (click)="login()">Login</button>
+    
+      <button type="submit">Login</button>
+      <p style="margin-top: 10px;">Vous n'avez pas encore de compte? <a href="/signup">enregistrez</a> vous</p>
+     </form>
+ 
     </div>
 
   </div>

@@ -5,6 +5,7 @@ import { LoginComponent } from './core/login/login.component';
 import { AdminPanelComponent } from './layout/admin-panel/admin-panel.component';
 import { UserPanelComponent } from './layout/user-panel/user-panel.component';
 import { ClientDashboardComponent } from './client/client-dashboard/client-dashboard/client-dashboard.component';
+import { RegistrationComponent } from './core/registration/registration.component';
 
 const routes: Routes = [
   {
@@ -56,6 +57,10 @@ const routes: Routes = [
       {
         path: 'login',
         component: LoginComponent,
+      },
+      {
+        path: 'signUp',
+        component: RegistrationComponent,
       },
     ]
   },

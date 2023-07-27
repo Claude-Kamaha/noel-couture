@@ -1,5 +1,53 @@
-<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-  <app-modal [modalTitle]="'Bienvenue chez Noel Couture'" (submit)="onSubmit()">
+<body>
+  <div class="box-form">
+    <div class="left">
+  
+    </div>
+
+    <div class="right">
+      
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="inputs">
+          <h1 style="    font-size: 30px;
+          margin-bottom: 30px;
+          font-weight: 600;">Bienvenue chez Noel Couture</h1>
+        
+          <input type="text" id="lname" name="username" placeholder="Nom" formControlName="name">
+          
+          <input type="text" name="email" placeholder="Email" formControlName="email">
+      
+         
+          <input type="text" id="password" name="password" placeholder="Mot de passe" formControlName="password">
+      
+        </div>
+      
+        <button type="submit">S'inscrire</button>
+        <p style="margin-top: 10px;">Vous avez deja un compte? <a href="/login">Connectez</a> vous</p>
+       </form>
+    </div>
+
+  </div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <app-modal [modalTitle]="'Bienvenue chez Noel Couture'" (submit)="onSubmit()">
     <div body>
 
 
@@ -20,5 +68,4 @@
       <input type="submit" value="Submit" [disabled]="!registerForm.valid">
 
     </div>
-  </app-modal>
-</form>
+  </app-modal> -->
