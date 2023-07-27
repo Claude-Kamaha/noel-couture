@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
+
 @NgModule({
   declarations: [
     AdminPanelComponent,
@@ -26,6 +27,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RouterModule,
     SharedModule,
     MaterialModule,
+  
     FormsModule,
     ReactiveFormsModule
     

@@ -12,11 +12,24 @@
           margin-bottom: 30px;
           font-weight: 600;">Bienvenue chez Noel Couture</h1>
         
-          <input type="text" id="lname" name="username" placeholder="Nom" formControlName="name">
+          <input type="text" id="lname" name="nom" placeholder="Nom" formControlName="nom">
           
           <input type="text" name="email" placeholder="Email" formControlName="email">
       
-         
+          <input type="text" name="phone" placeholder="Numero de telephone" formControlName="phone">
+          
+          <div style="display: flex;
+          flex-direction: row;">
+          <label>Sexe:</label> 
+          <div>
+          <input type="radio" id="contactChoice1" name="contact" value="F" style="display: inline;"/>
+          <label for="contactChoice1">Femme</label>
+        </div>
+          <div>
+    <input type="radio" id="contactChoice2" name="contact" value="M" />
+    <label for="contactChoice2">Homme</label>
+  </div>
+  </div>
           <input type="text" id="password" name="password" placeholder="Mot de passe" formControlName="password">
       
         </div>

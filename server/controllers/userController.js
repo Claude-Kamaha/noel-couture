@@ -22,7 +22,7 @@ class User {
 
   static save(user) {
     return connection.query(
-      'INSERT INTO users (name, email, password) VALUES (?, ?, ?)',
+      'INSERT INTO users (nom, email, password) VALUES (?, ?, ?)',
       [user.name, user.email, user.password]
     );
   }
@@ -35,7 +35,9 @@ exports.registration = (req, res) => {
 
   console.log(req.body);
 
-  const {name, email, password,rdv_id, created_at, updated_at} = req.body
+  
+
+  const {nom, email, password,id_typeuser, sexe,phone, created_at, updated_at} = req.body
 
  pool.getConnection((err, connection) => {
     if (err) throw err
@@ -51,9 +53,12 @@ exports.registration = (req, res) => {
 
      let hashedPassword = await bcrypt.hash(password, 8);
       connection.query('INSERT INTO users SET ?', {
-     name: name, email: email,
+        nom: nom,
+         email: email,
      password: hashedPassword,
-     rdv_id: rdv_id,
+     id_typeuser: id_typeuser,
+     sexe: sexe,
+     phone:phone,
      created_at: created_at,
      updated_at: updated_at
    },

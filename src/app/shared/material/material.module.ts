@@ -32,6 +32,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSidenavModule } from '@angular/material/sidenav'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedComponentsModule } from 'src/app/shared-components/shared-components.module';
 const MaterialComponents = [
   MatFormFieldModule,
   MatButtonModule,

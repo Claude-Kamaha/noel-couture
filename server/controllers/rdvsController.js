@@ -6,7 +6,7 @@ const pool = mysql.createPool({
   host: 'localhost',
   user: 'root',
   password: '',
-  database: 'couture'
+  database: 'atelier'
 });
 let data={
   response: '',
@@ -20,7 +20,7 @@ console.log('hello');
     console.log(`connected as id ${connection.threadId}`);
 
      connection.query(`
-    SELECT a.*, c.name, d.* FROM demandes AS a JOIN proposals AS b ON a.proposal_id = b.id JOIN users AS c ON b.user_id = c.id JOIN jours AS d ON b.jour_id = d.id;`
+    SELECT a.*, c.nom, d.* FROM demandes AS a JOIN proposals AS b ON a.proposal_id = b.id JOIN users AS c ON b.user_id = c.id JOIN jours AS d ON b.jour_id = d.id;`
      , (err, rows) => {
        connection.release();
 
@@ -45,25 +45,60 @@ console.log('hello');
     if (err) throw err
     console.log(`connected as id ${connection.threadId}`);
 
-     connection.query(`
-    SELECT a.*, c.name, FROM jours AS a JOIN users AS c ON a.user_id = c.id `
-     , (err, rows) => {
-       connection.release();
-
+     connection.query(`SELECT a.*, c.nom AS customer FROM disponibilite AS a LEFT JOIN users AS c ON a.id_user = c.id_user;`, (err, row) => {
+      // connection.release();
+console.log(row);
        if (!err) {
-        console.log(rows);
-         data.response = rows;
-         data.message = "Date succesfully retrieved";
-         console.log(data);
-        res.send(data)
+        res.status(200).json({
+          data: row,
+          message: 'Date succesfully retrieved'
+        })
+      
        }
        else {
+        console.log(err);
         data.message = "Date Failed to retrieved"
        }
   })
    })
 
 }
+
+
+
+
+exports.nouveauJour = (req, res) => {
+
+  console.log(req.body);
+
+  const {date_dispo, message,id_user, created_at, updated_at} = req.body
+ 
+ pool.getConnection((err, connection) => {
+      connection.query('INSERT INTO disponibilite SET ?', {
+        date_dispo: date_dispo,
+        message: message,
+        id_user: id_user,
+     created_at: created_at,
+     updated_at: updated_at
+   },
+     (err, rows) => {
+       connection.release();
+
+       if (!err) {
+         res.status(200).send({
+           message: 'Rdv registered Ok '
+         })
+       }
+       else {
+         console.log(err)
+       }
+  })
+   })
+   }
+
+
+
+
 
 
 

@@ -6,7 +6,8 @@ import { Component, EventEmitter, Input, Output, TemplateRef } from '@angular/co
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent {
-  @Input() modalTitle: any;
+  @Input()
+  modalTitle!: string;
   @Input() data: any;
   @Input()
   detailRef!: TemplateRef<any>;

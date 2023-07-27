@@ -10,7 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-
+   ModalComponent
   ],
   imports: [
     CommonModule,
@@ -19,6 +19,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     FormsModule,
     MatFormFieldModule
+  ],
+  exports:[
+    ModalComponent
   ]
 })
 export class SharedComponentsModule { }

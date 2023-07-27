@@ -31,13 +31,16 @@ export class RegistrationComponent {
     this.createNewAbuseGroupForm()
 
   }
+ 
   createNewAbuseGroupForm(): void {
     this.registerForm = this.formBuilder.group({
 
-      name: [''],
+      nom: [''],
       email: [''],
       password: [''],
-      rdv_id: [2],
+      sexe:[''],
+      phone:[''],
+      id_typeuser: [2],
       created_at: [Date()],
       updated_at: [Date()],
 

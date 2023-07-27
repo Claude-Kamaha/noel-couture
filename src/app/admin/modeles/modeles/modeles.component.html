@@ -3,10 +3,22 @@
     <div class="page__content shadow p-3 position-relative">
         <div class="page__content-data  text-align-center">
            <div class="table">
+            <div style="display: flex; flex-direction: row;justify-content: space-between">
+              <div>
             <mat-form-field appearance="outline">
-    <mat-label>Filter</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
-  </mat-form-field>
+              <mat-label>Filter</mat-label>
+              <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+            </mat-form-field>
+          </div>
+            <div style="float: right; width: 10%;">
+              <button class="page-header-right-actions" style="border-radius: 5px;" (click)="newModele()">
+                <i class="fal fa-plus"></i> &nbsp;Ajouter Modele
+              </button>
+            </div>
+          </div>
+          
+           <hr>
+  
   
   <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource" matSort>
@@ -46,3 +58,38 @@
 </div  >
 </div>
 </div>
+
+
+<ng-template let-data #myInfoDialog>
+
+  <form [formGroup]="modeleForm" enctype="multipart/form-data" (ngSubmit)="onSubmit()">
+    <app-modal [modalTitle]="'Nouveau Modele'">
+      <div body>
+        <div>
+          <label for="lname">Choisir un Modele </label><br>
+          <input type="file" id="filePicker" formControlName="image" (change)="handleFileSelect($event)">
+          <!-- <input type="file"  name="produit" placeholder="Modele" accept="image/"  formControlName="image"> -->
+        </div>
+        <div>
+          <label for="lname">Nom </label>
+          <input type="text" name="nom" placeholder="nom" formControlName="nom">
+        </div>
+        
+     <div>
+        <label for="lname">Prix</label>
+        <input type="number" id="lname" name="prix" placeholder="Nom" formControlName="prix">
+      </div>
+       
+       
+      </div>
+      <div btns class="divHeight" >
+
+        <input type="button" value="Cancel" mat-dialog-close>
+        <input type="submit" value="Submit">
+
+      </div>
+    </app-modal>
+  </form>
+
+
+</ng-template>

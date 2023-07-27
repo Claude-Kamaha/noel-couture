@@ -131,7 +131,7 @@ html,body {
   .box-form .right {
     padding: 40px;
     overflow: hidden;
-    margin-top: 40px;
+    // margin-top: 0px;
      width: 50%;
   }
   @media (max-width: 980px) {
@@ -152,9 +152,9 @@ html,body {
   }
   .box-form .right input {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     padding: 10px;
-    margin-top: 25px;
+    margin-top: 10px;
     font-size: 16px;
     border: none;
     outline: none;
@@ -190,40 +190,41 @@ html,body {
     margin-left: 30px;
   }
   
-  label::before {
-    content: ' \f00c';
-    position: absolute;
-    font-family: FontAwesome;
-    background: transparent;
-    border: 3px solid #70F570;
-    border-radius: 4px;
-    color: transparent;
-    left: -30px;
-    transition: all 0.2s linear;
-  }
+//   label::before {
+//     content: ' \f00c';
+//     position: absolute;
+//     font-family: FontAwesome;
+//     background: transparent;
+//     border: 3px solid #70F570;
+//     border-radius: 4px;
+//     color: transparent;
+//     left: -30px;
+//     transition: all 0.2s linear;
+//   }
   
-  label:hover::before {
-    font-family: FontAwesome;
-    content: ' \f00c';
-    color: #fff;
-    cursor: pointer;
-    background: #70F570;
-  }
+//   label:hover::before {
+//     font-family: FontAwesome;
+//     content: ' \f00c';
+//     color: #fff;
+//     cursor: pointer;
+//     background: #70F570;
+//   }
   
-  label:hover::before .text-checkbox {
-    background: #70F570;
-  }
+//   label:hover::before .text-checkbox {
+//     background: #70F570;
+//   }
   
-  label span.text-checkbox {
-    display: inline-block;
-    height: auto;
-    position: relative;
-    cursor: pointer;
-    transition: all 0.2s linear;
-  }
+//   label span.text-checkbox {
+//     display: inline-block;
+//     height: auto;
+//     position: relative;
+//     cursor: pointer;
+//     transition: all 0.2s linear;
+//   }
   
-  label input[type="checkbox"] {
-    display: none;
+   input[type="radio"] {
+    //  display: none;
+    width: 20%;
   }
   
   .inputs{

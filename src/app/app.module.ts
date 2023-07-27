@@ -8,8 +8,6 @@ import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform
 import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './shared/material/material.module';
 import { HttpClientModule } from '@angular/common/http';
-import { ModalComponent } from './shared-components/modal/modal.component';
-import { SharedComponentsModule } from './shared-components/shared-components.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthModule } from './core/auth.module';
 import { DatePipe } from '@angular/common';
@@ -30,7 +28,6 @@ import { DatePipe } from '@angular/common';
     ReactiveFormsModule,
     FormsModule,
     SharedModule,
-
     MaterialModule,
     HttpClientModule,
 
